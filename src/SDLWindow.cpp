@@ -1,6 +1,5 @@
 #include "SDLWindow.h"
 
-
 namespace SX::SDLWindow
 {
     SDLWindow::SDLWindow(string_view title_in) : m_window(nullptr), m_title(title_in)
