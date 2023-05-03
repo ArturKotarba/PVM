@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/GraphicsImgReader.cpp.o CMakeFiles/main.dir/SDLWindow.cpp.o CMakeFiles/main.dir/ScreenManager.cpp.o -o main  -L/usr/lib/x86_64-linux-gnu  -lSDL2 

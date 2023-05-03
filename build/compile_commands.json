@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/akotarba/source/ProjektPVM/build/src",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -g -o CMakeFiles/main.dir/main.cpp.o -c /home/akotarba/source/ProjektPVM/src/main.cpp",
+  "file": "/home/akotarba/source/ProjektPVM/src/main.cpp"
+},
+{
+  "directory": "/home/akotarba/source/ProjektPVM/build/src",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -g -o CMakeFiles/main.dir/GraphicsImgReader.cpp.o -c /home/akotarba/source/ProjektPVM/src/GraphicsImgReader.cpp",
+  "file": "/home/akotarba/source/ProjektPVM/src/GraphicsImgReader.cpp"
+},
+{
+  "directory": "/home/akotarba/source/ProjektPVM/build/src",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -g -o CMakeFiles/main.dir/SDLWindow.cpp.o -c /home/akotarba/source/ProjektPVM/src/SDLWindow.cpp",
+  "file": "/home/akotarba/source/ProjektPVM/src/SDLWindow.cpp"
+},
+{
+  "directory": "/home/akotarba/source/ProjektPVM/build/src",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -g -o CMakeFiles/main.dir/ScreenManager.cpp.o -c /home/akotarba/source/ProjektPVM/src/ScreenManager.cpp",
+  "file": "/home/akotarba/source/ProjektPVM/src/ScreenManager.cpp"
+}
+]

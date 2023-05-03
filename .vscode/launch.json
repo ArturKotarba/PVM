@@ -1,0 +1,12 @@
+{
+    "configurations":
+    [
+        {
+            "name": "Windows(Launch)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/output/main",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

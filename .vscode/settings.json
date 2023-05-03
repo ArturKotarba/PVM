@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "cstdlib": "cpp",
+        "string_view": "cpp",
+        "memory": "cpp",
+        "random": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "unordered_map": "cpp",
+        "fstream": "cpp",
+        "numeric": "cpp",
+        "ostream": "cpp",
+        "typeinfo": "cpp",
+        "string": "cpp"
+    }
+}
