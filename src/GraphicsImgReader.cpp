@@ -10,25 +10,25 @@ namespace SX::Images
   {
   }
 
-  shared_ptr<SDL_Surface> GraphicsImgReader::getBitmap()
+  const shared_ptr<SDL_Surface> GraphicsImgReader::getBitmap()
   {
     return m_bmp;
   }
 
-  uint16_t GraphicsImgReader::getWidth()
+  const uint16_t GraphicsImgReader::getWidth()
   {
     return m_width;
   }
 
-  uint16_t GraphicsImgReader::getHeight()
+  const uint16_t GraphicsImgReader::getHeight()
   {
     return m_height;
   }
 
-  void GraphicsImgReader::loadBMP(string filePath)
+  void GraphicsImgReader::loadBMP(const string& filePath_in)
   {
-    filePath = SDL_GetBasePath();
-    filePath += string("graphicsImages/5.bmp");
+    string filePath = SDL_GetBasePath();
+    filePath += string("graphicsImages/4.bmp");
     m_bmp.reset(SDL_LoadBMP(filePath.data()));
 
     if (!m_bmp.get())

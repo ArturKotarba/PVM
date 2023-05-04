@@ -9,10 +9,10 @@ namespace SX::Images
     public:
         GraphicsImgReader();
         ~GraphicsImgReader();
-        shared_ptr<SDL_Surface> getBitmap();
-        uint16_t getWidth();
-        uint16_t getHeight();
-        void loadBMP(string filePath = "");
+        const shared_ptr<SDL_Surface> getBitmap();
+        const uint16_t getWidth();
+        const uint16_t getHeight();
+        void loadBMP(const string& filePath_in = "");
 
     private:
         shared_ptr<SDL_Surface> m_bmp;

@@ -32,13 +32,14 @@ namespace SX::ScreenManager
             {
                 SDL_Color color;
                 color = getPixelSurface(x, y, bmp);
-                cout << "r, g, b: " << (int)color.r << " " << (int)color.g << " " << (int)color.b << "\n";
+                //cout << "r, g, b: " << (int)color.r << " " << (int)color.g << " " << (int)color.b << "\n";
+                m_buildingAreaCalculator.compareColors(color);
                 setPixel(x, y, color.r, color.g, color.b);
-                m_callback();
             }
         }
-        #TODO Retrun normal callback after testing
-        //m_callback();
+        m_callback();
+        // m_buildingAreaCalculator.getPixelsNumber();
+        // TODO line above is needed only for testing so far
     }
 
     SDL_Color ScreenManager::getPixelSurface(int x, int y, shared_ptr<SDL_Surface> surface)

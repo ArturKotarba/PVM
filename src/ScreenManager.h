@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "BuildingAreaCalculator.h"
 
 using Callback = function<void()>; 
 
@@ -19,6 +20,7 @@ namespace SX::ScreenManager
     private:
         SDL_Surface *m_screen;
         Callback m_callback;
+        SX::Building::Calculator::BuildingAreaCalculator m_buildingAreaCalculator;
     };
 
 } // namespace SX::ScreenManager

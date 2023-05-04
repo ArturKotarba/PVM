@@ -9,6 +9,8 @@ set(SOURCES
     SDLWindow.cpp
     ScreenManager.h
     ScreenManager.cpp
+    BuildingAreaCalculator.h
+    BuildingAreaCalculator.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
