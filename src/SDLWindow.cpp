@@ -14,13 +14,28 @@ namespace SX::SDLWindow
     {
     }
 
-    void SDLWindow::start()
+    void SDLWindow::start(int MIN, int MAX)
     {
-        m_imgReader.loadBMP();
-        createWindowWithBMP();
-        m_screenManager.registerCallback([this](){this->update();});
-        m_screenManager.init(m_window);
-        m_screenManager.drawBMPOnWindow(m_imgReader.getWidth(), m_imgReader.getHeight(), m_imgReader.getBitmap());
+        std::vector<int> retTableToSlave{};
+        
+        for(int i = MIN; i < MAX; i++) 
+        {
+            m_imgReader.loadBMP("graphicsImages/" + std::to_string(i + 1) + ".bmp");
+            createWindowWithBMP();
+            m_screenManager.registerCallback([this](){this->update();});
+            m_screenManager.init(m_window);
+            m_screenManager.drawBMPOnWindow(m_imgReader.getWidth(), m_imgReader.getHeight(), m_imgReader.getBitmap(), retTableToSlave);
+            //probably best way is to create new instance of screenManager::m_buildingAreaCalcultor for each picture
+        }
+            pvm_initsend(PvmDataDefault);
+            
+            // for (int i = 0; i < retTableToSlave.size(); i++)
+            // {
+            //     std::cout << "retTableToSlave[i]: " << retTableToSlave[i] << "\n"; 
+            // }
+
+            int info = pvm_pkint(retTableToSlave.data(), retTableToSlave.size(), 1);
+            pvm_send(pvm_parent(), 1);
     }
 
     void SDLWindow::createWindowWithBMP()

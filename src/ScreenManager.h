@@ -4,6 +4,8 @@
 
 using Callback = function<void()>; 
 
+#define time std::chrono::_V2::system_clock::time_point
+
 namespace SX::ScreenManager
 {
     class ScreenManager
@@ -11,7 +13,7 @@ namespace SX::ScreenManager
     public:
         ScreenManager();
         ~ScreenManager();
-        void drawBMPOnWindow(int width, int height, shared_ptr<SDL_Surface> surface);
+        void drawBMPOnWindow(int width, int height, shared_ptr<SDL_Surface> surface, std::vector<int>& retTableToSlave_in);
         SDL_Color getPixelSurface(int x, int y, shared_ptr<SDL_Surface> surface);
         void setPixel(int x, int y, Uint8 R, Uint8 G, Uint8 B);
         void init(SDL_Window* window);

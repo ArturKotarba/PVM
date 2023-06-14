@@ -28,7 +28,7 @@ namespace SX::Images
   void GraphicsImgReader::loadBMP(const string& filePath_in)
   {
     string filePath = SDL_GetBasePath();
-    filePath += string("graphicsImages/4.bmp");
+    filePath += filePath_in;
     m_bmp.reset(SDL_LoadBMP(filePath.data()));
 
     if (!m_bmp.get())

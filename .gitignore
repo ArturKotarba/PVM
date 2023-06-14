@@ -1,2 +1,9 @@
 build/
-calyKodGrafikaKomp
+*/CMakeFiles/*
+CMakeCache.txt
+.vscode/*
+output/
+output/*
+*.o
+*.d
+CMakeFiles/*

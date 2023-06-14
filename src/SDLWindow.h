@@ -10,7 +10,7 @@ namespace SX::SDLWindow
     {
         public:
         explicit SDLWindow(string_view title_in);
-        void start();
+        void start(int, int);
         ~SDLWindow();
         void createWindowWithBMP();
         void setScreen();

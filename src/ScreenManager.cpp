@@ -1,5 +1,6 @@
 #include "ScreenManager.h"
 
+extern int Tits[4];
 namespace SX::ScreenManager
 {
 
@@ -24,7 +25,7 @@ namespace SX::ScreenManager
         }
     }
 
-    void ScreenManager::drawBMPOnWindow(int width, int height, shared_ptr<SDL_Surface> bmp)
+    void ScreenManager::drawBMPOnWindow(int width, int height, shared_ptr<SDL_Surface> bmp, std::vector<int>& retTableToSlave_in)
     {
         for (int y = 0; y < height; y++)
         {
@@ -32,14 +33,14 @@ namespace SX::ScreenManager
             {
                 SDL_Color color;
                 color = getPixelSurface(x, y, bmp);
-                //cout << "r, g, b: " << (int)color.r << " " << (int)color.g << " " << (int)color.b << "\n";
                 m_buildingAreaCalculator.compareColors(color);
                 setPixel(x, y, color.r, color.g, color.b);
             }
         }
         m_callback();
-        // m_buildingAreaCalculator.getPixelsNumber();
-        // TODO line above is needed only for testing so far
+
+        retTableToSlave_in.emplace_back(m_buildingAreaCalculator.calculateTotalArea());
+        m_buildingAreaCalculator.setPixelNumber(0); 
     }
 
     SDL_Color ScreenManager::getPixelSurface(int x, int y, shared_ptr<SDL_Surface> surface)

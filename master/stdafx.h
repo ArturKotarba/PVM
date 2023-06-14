@@ -8,9 +8,7 @@
 #include <stdlib.h>
 #include <exception>
 #include <math.h>
-#include <cmath>
 #include <memory>
-#include <chrono>
 #include <SDL2/SDL.h>
 #include <functional>
 #include <pvm3.h>
