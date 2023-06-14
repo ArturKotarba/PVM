@@ -1,6 +1,5 @@
 #include "ScreenManager.h"
 
-extern int Tits[4];
 namespace SX::ScreenManager
 {
 
