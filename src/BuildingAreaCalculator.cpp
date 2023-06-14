@@ -1,6 +1,9 @@
 #include "BuildingAreaCalculator.h"
 
 #define SCALE 10
+#define SCREENHEIGTH 14 // cali
+#define SCREENWIDTH 10 // cali
+
 
 namespace SX::Building::Calculator
 {
@@ -42,7 +45,9 @@ namespace SX::Building::Calculator
 
     const size_t BuildingAreaCalculator::calculateTotalArea()
     {
-        return sqrt( ( getPixelsNumber() * SCALE ) );
+        // std::cout << "getScreenResolution(): " << getScreenResolution() << "getPixelsNumber(): " << getPixelsNumber() << "\n";
+
+        return ((getPixelsNumber() *  getScreenResolution() ) / 100 * SCALE);
     }
 
     const size_t BuildingAreaCalculator::getPixelsNumber()
@@ -53,6 +58,16 @@ namespace SX::Building::Calculator
     void BuildingAreaCalculator::setPixelNumber(size_t val) 
     {
         m_pixelsNumber = val;
+    }
+
+    double BuildingAreaCalculator::getScreenResolution()
+    {
+        SDL_GetCurrentDisplayMode(0, &m_DM);
+
+        auto realPixelHeight = ( SCREENHEIGTH * 2.5 * 10 ) / m_DM.h;
+        auto realPixelWidth = ( SCREENHEIGTH * 2.5 * 10 ) / m_DM.w;
+
+        return realPixelHeight * realPixelWidth;
     }
 
 } // namespace SX::Building::Calculator

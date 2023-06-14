@@ -20,8 +20,10 @@ namespace SX::Building::Calculator
         bool compareBuildingEdgeColors(const SDL_Color &color_in);
         const size_t getPixelsNumber();
         void setPixelNumber(size_t val);
+        double getScreenResolution();
 
     private:
+        SDL_DisplayMode m_DM;
         BuildingsColors m_buildingsColors;
         size_t m_pixelsNumber;
     };

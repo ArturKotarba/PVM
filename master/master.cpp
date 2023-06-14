@@ -3,7 +3,7 @@
 
 int main()
 {
-    int masterId, numOfProcesses = 3, numOfFiles = 21, createdProcesses;
+    int masterId, numOfProcesses = 2, numOfFiles = 10, createdProcesses;
     int childrenIds[1];
     std::vector<int> createdChilds{};
     const int index = numOfFiles / numOfProcesses;
@@ -79,8 +79,6 @@ int main()
     auto diff = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::cout << "Time that whole program took: " << diff << "\n"; 
 
-
-    //Time that whole program took: 366549, 358036
 
     pvm_exit();
     return 0;
