@@ -1,0 +1,3 @@
+/home/user/PVM/master/CMakeFiles/master.dir
+/home/user/PVM/master/CMakeFiles/edit_cache.dir
+/home/user/PVM/master/CMakeFiles/rebuild_cache.dir
